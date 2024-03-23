@@ -29,20 +29,16 @@
     <!-- Schedule Section -->
     <section id="schedule" class="px-5 py-10">
         <h2 class="text-3xl font-bold text-center mb-10">Event Schedule</h2>
-        <div class="max-w-4xl mx-auto space-y-8">
-            <div class="bg-white shadow-lg rounded-lg p-5">
-                <p class="mb-2"><strong>10:00 - 11:00</strong> - Check in + Breakfast + Mingling</p>
-                <p class="mb-2"><strong>11:00 - 11:55</strong> - Intro + TAM Game</p>
-                <p class="mb-2"><strong>12:00 - 12:30</strong> - Old Mission Capital Game</p>
-                <p class="mb-2"><strong>12:35 - 1:05</strong> - Companies Panel</p>
-                <p class="mb-2"><strong>1:10 - 2:00</strong> - Lunch + Career Networking</p>
-                <p class="mb-2"><strong>2:00 - 2:30</strong> - DRW Game</p>
-                <p class="mb-2"><strong>2:35 - 3:05</strong> - Five Rings Game</p>
-                <p class="mb-2"><strong>3:10 - 3:40</strong> - IMC Game</p>
-                <p class="mb-2"><strong>3:40 - 3:50</strong> - Break</p>
-                <p class="mb-2"><strong>3:50 - 4:30</strong> - Recruiter Speed Dating</p>
-                <p class="mb-2"><strong>4:35 - 4:55</strong> - Closing Remarks + Awards Ceremony</p>
-                <p class="mb-2"><strong>5:00 - 5:15</strong> - Swag Distribution + Goodbyes</p>
+        <div class="max-w-4xl mx-auto space-y-4">
+            <div class="bg-white shadow-lg rounded-lg p-5 space-y-4">
+                <!-- Event Item -->
+                <div class="event bg-gray-100 rounded-lg p-4 relative cursor-pointer">
+                    <p class="mb-2"><strong>10:00 - 11:00</strong> - Check in + Breakfast + Mingling</p>
+                    <div class="popover-content absolute w-64 bg-white p-3 rounded-lg shadow-lg hidden" style="bottom: 100%; left: 50%; transform: translateX(-50%); z-index: 10;">
+                        Check in, enjoy breakfast, and mingle with other attendees.
+                    </div>
+                </div>
+                <!-- Repeat for other events -->
             </div>
         </div>
     </section>
