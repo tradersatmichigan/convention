@@ -4,7 +4,7 @@ const express = require("express")
 const app = express()
 
 app.use(express.static(path.join(__dirname, "public/")))
-app.use(express.static(path.join(__dirname, "pages/")))
+app.use(express.static(path.join(__dirname, "docs/")))
 
 app.get("/", (req,res) => {
   exec('npx tailwindcss -i ./input.css -o ./public/out.css ', (err, stdout, stderr) => {
@@ -13,7 +13,7 @@ app.get("/", (req,res) => {
     return;
   }
 });
-  res.sendFile(path.join("__dirname", "pages/index.html"))
+  res.sendFile(path.join("__dirname", "docs/index.html"))
 })
 
 app.listen(3000, () => {
