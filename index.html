@@ -21,62 +21,37 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const popoverTriggers = document.querySelectorAll('[data-popover-target]');
-
-            // Function to check if text is selected
-            function isTextSelected() {
-                const selection = window.getSelection();
-                return selection.type === 'Range' && selection.toString().length > 0;
-            }
+            let touchEventDetected = false; // Flag to detect touch events
 
             popoverTriggers.forEach(trigger => {
                 trigger.addEventListener('click', function (event) {
-                    // Prevent default action and stop propagation to handle mobile touches better
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    // Don't show popover if text is selected
-                    if (isTextSelected()) {
-                        return;
+                    if (touchEventDetected) {
+                        // If touch event was detected, prevent the click event
+                        touchEventDetected = false; // Reset for next time
+                        return; // Exit the event handler
                     }
-
-                    const targetId = trigger.getAttribute('data-popover-target');
-                    const target = document.getElementById(targetId);
-
-                    // Toggle visibility
-                    const isVisible = target.classList.contains('visible');
-                    if (!isVisible) {
-                        target.classList.add('visible');
-                        target.classList.remove('invisible');
-                        target.style.opacity = '1';
-                    } else {
-                        target.classList.remove('visible');
-                        target.classList.add('invisible');
-                        target.style.opacity = '0';
-                    }
+                    // Your existing click event logic here
                 });
 
-                // Consider touchend event for mobile devices for better responsiveness
                 trigger.addEventListener('touchend', function (event) {
-                    event.stopPropagation(); // Only needed if you want to specifically handle touch events
+                    touchEventDetected = true; // Set the flag to indicate a touch event occurred
+                    // Your touch-specific logic here, which could be similar to your click logic
                 });
             });
 
-            // Close popovers when tapping outside, considering touch events
+            // Close popovers when tapping outside, similar to your existing logic
             document.body.addEventListener('click', closePopoversOnOutsideClick, true);
             document.body.addEventListener('touchend', closePopoversOnOutsideClick, true);
 
             function closePopoversOnOutsideClick(e) {
-                if (!e.target.closest('[data-popover-target]')) {
-                    document.querySelectorAll('[data-popover]').forEach(popover => {
-                        if (popover.classList.contains('visible')) {
-                            popover.classList.remove('visible');
-                            popover.classList.add('invisible');
-                            popover.style.opacity = '0';
-                        }
-                    });
+                if (!e.target.closest('[data-popover-target]') && !touchEventDetected) {
+                    // Your logic to close popovers
                 }
+                // Reset the touchEventDetected flag after a short delay to handle subsequent clicks
+                setTimeout(() => { touchEventDetected = false; }, 300);
             }
         });
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <!-- Full-screen Name Section -->
@@ -326,11 +301,11 @@
                         class="max-h-20"></a>
             </div>
             <div class="flex justify-center items-center">
-                <a href="https://www.oldmissioncapital.com"><img src="./assets/oldmissionlogo.png" alt="Old Mission Capital"
-                        class="max-h-20"></a>
+                <a href="https://www.oldmissioncapital.com"><img src="./assets/oldmissionlogo.png"
+                        alt="Old Mission Capital" class="max-h-20"></a>
             </div>
         </div>
-        
+
         <!-- Repeat for each sponsor, adjusting the src attribute for each logo -->
         </div>
         <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
