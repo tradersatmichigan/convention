@@ -23,44 +23,24 @@
             const popoverTriggers = document.querySelectorAll('[data-popover-target]');
 
             popoverTriggers.forEach(trigger => {
-                const targetId = trigger.getAttribute('data-popover-target');
-                const target = document.getElementById(targetId);
-
-                // Toggle popover on click
                 trigger.addEventListener('click', function (event) {
-                    event.preventDefault(); // Prevent default if it's a link or button
-                    const isVisible = target.classList.contains('visible');
+                    event.preventDefault();
+                    event.stopPropagation();
 
-                    // Hide any open popover first
-                    document.querySelectorAll('[data-popover]').forEach(popover => {
-                        popover.classList.remove('visible');
-                        popover.classList.add('invisible');
-                        popover.style.opacity = '0';
-                    });
+                    const targetId = this.getAttribute('data-popover-target');
+                    const target = document.getElementById(targetId);
 
-                    // Toggle the clicked popover
-                    if (!isVisible) {
-                        target.classList.add('visible');
+                    if (target.classList.contains('invisible')) {
                         target.classList.remove('invisible');
+                        target.classList.add('visible');
                         target.style.opacity = '1';
                     } else {
-                        target.classList.remove('visible');
                         target.classList.add('invisible');
+                        target.classList.remove('visible');
                         target.style.opacity = '0';
                     }
                 });
             });
-
-            // Optional: Hide popovers when clicking outside
-            document.body.addEventListener('click', function (e) {
-                if (!e.target.closest('[data-popover-target]')) {
-                    document.querySelectorAll('[data-popover]').forEach(popover => {
-                        popover.classList.remove('visible');
-                        popover.classList.add('invisible');
-                        popover.style.opacity = '0';
-                    });
-                }
-            }, true);
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
@@ -304,25 +284,30 @@
                 <a href="https://www.drw.com"><img src="./assets/drwlogo.png" alt="DRW" class="max-h-20"></a>
             </div>
             <div class="flex justify-center items-center">
-                <a href="https://www.fiverings.com"><img src="./assets/fiveringslogo.png" alt="Five Rings" class="max-h-20"></a>
+                <a href="https://www.fiverings.com"><img src="./assets/fiveringslogo.png" alt="Five Rings"
+                        class="max-h-20"></a>
             </div>
             <div class="flex justify-center items-center">
                 <a href="https://www.imc.com"><img src="./assets/imclogo.png" alt="IMC" class="max-h-20"></a>
             </div>
             <div class="flex justify-center items-center">
-                <a href="https://www.oldmissioncapital.com"><img src="./assets/oldmissionlogo.png" alt="Old Mission Capital" class="max-h-20"></a>
+                <a href="https://www.oldmissioncapital.com"><img src="./assets/oldmissionlogo.png"
+                        alt="Old Mission Capital" class="max-h-20"></a>
             </div>
             <!-- Repeat for each sponsor, adjusting the src attribute for each logo -->
         </div>
         <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
             <div class="flex justify-center items-center">
-                <a href="https://www.janestreet.com"><img src="./assets/janestreetlogo.png" alt="Jane Street" class="max-h-20"></a>
+                <a href="https://www.janestreet.com"><img src="./assets/janestreetlogo.png" alt="Jane Street"
+                        class="max-h-20"></a>
             </div>
             <div class="flex justify-center items-center">
-                <a href="https://www.hap-capital.com"><img src="./assets/hapcapitallogo.png" alt="HAP Capital" class="max-h-20"></a>
+                <a href="https://www.hap-capital.com"><img src="./assets/hapcapitallogo.png" alt="HAP Capital"
+                        class="max-h-20"></a>
             </div>
             <div class="flex justify-center items-center">
-                <a href="https://www.sig.com"><img src="./assets/siglogo.png" alt="Susquehanna International Group" class="max-h-20"></a>
+                <a href="https://www.sig.com"><img src="./assets/siglogo.png" alt="Susquehanna International Group"
+                        class="max-h-20"></a>
             </div>
         </div>
     </section>
