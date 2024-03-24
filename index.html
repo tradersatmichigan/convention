@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>UMich Quant Convention</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html {
@@ -17,20 +18,29 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900">
-    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <!-- Full-screen Name Section -->
-    <section class="h-screen flex flex-col justify-center items-center bg-white">
+    <section class="h-screen flex flex-col justify-center items-center bg-white gap-5">
         <img width="200px" height="auto" src="https://tradersatmichigan.com/images/logo.png" />
-        <h1 class="text-6xl font-bold">UMich Quant Convention</h1>
-        <p class="text-xl text-gray-600 mt-3">Hosted by Traders at Michigan</p>
-        <div class="flex items-center mt-2">
-            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mr-2 bg-orange-500 hover:bg-orange-400"
+        <h1 class="text-6xl font-bold text-center">UMich Quant Convention</h1>
+        <p class="text-xl text-gray-600 mt-3 text-center">Hosted by Traders at Michigan</p>
+        <div class="gap-2">
+        <div class="flex items-center mt-2 grid grid-cols-3 justify-center">
+            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mr-2 bg-orange-400 hover:bg-orange-300"
                 href="#schedule">Schedule</a>
-            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mr-2 bg-orange-500 hover:bg-orange-400"
+            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mr-2 bg-orange-400 hover:bg-orange-300"
+                href="#sponsors">Sponsors</a>
+            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mr-2 bg-orange-400 hover:bg-orange-300"
                 href="https://docs.google.com/forms/d/e/1FAIpQLScZRTzsPrafhUgLAJVF5GTdyxekcqPIVC9TeYD-JrGRv0M0UQ/viewform">Apply</a>
-            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 bg-orange-500 hover:bg-orange-400"
-                href="https://tradersatmichigan.com/">Club Website</a>
         </div>
+        <div class="flex items-center mt-2 grid grid-cols-2 justify-center">
+            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm text-white font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mr-2 bg-blue-950 hover:bg-blue-900"
+                href="https://tradersatmichigan.com">Club Website</a>
+            <a class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm text-white font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mr-2 bg-blue-950 hover:bg-blue-900"
+                href="https://www.linkedin.com/company/traders-at-michigan/">Club LinkedIn</a>
+        </div>
+    </div>
+        
     </section>
 
     <!-- Schedule Section -->
@@ -49,6 +59,7 @@
                     <div class="px-3 py-2">
                         <p>Check in to the conference, grab some breakfast, and network with industry professionals and peers.</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-2">
@@ -61,6 +72,7 @@
                     <div class="px-3 py-2">
                         <p>Brief introduction to the convention and our attending sponsors, followed by a game of our in-house developed version of Figgie.</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-3">
@@ -73,6 +85,7 @@
                     <div class="px-3 py-2">
                         <p>Game hosted by our attending sponsor, Old Mission Capital!</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-4">
@@ -85,6 +98,7 @@
                     <div class="px-3 py-2">
                         <p>Panel hosted by some of our sponsors' employees.</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-5">
@@ -97,6 +111,7 @@
                     <div class="px-3 py-2">
                         <p>Enjoy lunch catered by X, while networking with peers and industry professionals.</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-6">
@@ -109,6 +124,7 @@
                     <div class="px-3 py-2">
                         <p>Game hosted by our attending sponsor, DRW!</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-7">
@@ -121,6 +137,7 @@
                     <div class="px-3 py-2">
                         <p>Game hosted by our attending sponsor, Five Rings!</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-8">
@@ -133,6 +150,7 @@
                     <div class="px-3 py-2">
                         <p>Game hosted by our attending sponsor, IMC!</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-9">
@@ -145,6 +163,7 @@
                     <div class="px-3 py-2">
                         <p>Take a break.</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-10">
@@ -157,6 +176,7 @@
                     <div class="px-3 py-2">
                         <p>Speed Dating session with recruiters from all of our attending sponsors.</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-11">
@@ -169,6 +189,7 @@
                     <div class="px-3 py-2">
                         <p>Some closing remarks from the Traders at Michigan board, accompanied by an awards ceremony.</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer" data-popover-target="popover-12">
@@ -181,6 +202,7 @@
                     <div class="px-3 py-2">
                         <p>Pick up some merchandise from our industry sponsors on your way out!</p>
                     </div>
+                    <div data-popper-arrow></div>
                 </div>
 
 
@@ -192,7 +214,7 @@
         <div class="text-center">
             <h2 class="text-3xl font-bold mb-5">Sponsors</h2>
         </div>
-        <div class="h-4/5 max-w-6xl mx-auto px-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 pb-10">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 pb-20">
             <!-- Example Sponsor Logo -->
             <div class="flex justify-center items-center">
                 <img src="./assets/drwlogo.png" alt="DRW" class="max-h-20">
@@ -208,7 +230,6 @@
             </div>
             <!-- Repeat for each sponsor, adjusting the src attribute for each logo -->
         </div>
-        <br />
         <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
             <div class="flex justify-center items-center">
                 <img src="./assets/janestreetlogo.png" alt="Jane Street" class="max-h-20">
