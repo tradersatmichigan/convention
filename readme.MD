@@ -1,2 +1,6 @@
+<p align="center">
+  <img src="https://tradersatmichigan.com/images/logo.png" alt="TAM logo"/>
+</p>
+
 # Convention Website
-A website to display the information for the TAM quant convention on 4-20-24
+A website for the 2024 quant convention being hosted by Traders at Michigan.
