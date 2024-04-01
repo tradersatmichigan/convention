@@ -79,8 +79,8 @@
     </section>
 
     <!-- Schedule Section -->
-    <section id="schedule" class="px-5 py-10">
-        <h2 class="text-3xl font-bold text-center mb-10">Event Schedule</h2>
+    <section id="schedule" class="px-5 py-10 bg-[url('../public/michigan-stadium.png')] bg-cover bg-no-repeat bg-fixed  ">
+        <h2 class="text-3xl font-bold text-center mb-10 text-white ">Event Schedule</h2>
         <div class="max-w-4xl mx-auto space-y-4">
             <div class="bg-white shadow-lg rounded-lg p-5 space-y-4">
                 <!-- Event Item -->
@@ -103,17 +103,17 @@
 
                 <div class="event bg-gray-100 hover:bg-gray-200 rounded-lg p-4 relative cursor-pointer"
                     data-popover-target="popover-2">
-                    <p class="mb-2"><strong>11:00 - 11:55 </strong> — Introduction & Figgie </p>
+                    <p class="mb-2"><strong>11:00 - 11:55 </strong> — Introduction & Zingers </p>
                 </div>
                 <div data-popover id="popover-2" role="tooltip"
                     class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                     <div
                         class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-                        <h3 class="font-semibold text-gray-900 dark:text-white">Introduction & Figgie</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Introduction & Zingers</h3>
                     </div>
                     <div class="px-3 py-2">
                         <p>Brief introduction to the convention and our attending sponsors, followed by a game of our
-                            in-house developed version of Figgie.</p>
+                            in-house developed trading simulation game.</p>
                     </div>
                     <div data-popper-arrow></div>
                 </div>
@@ -288,11 +288,13 @@
         <div class="text-center">
             <h2 class="text-3xl font-bold mb-5">Sponsors</h2>
         </div>
-        <div class="max-w-6xl mx-auto px-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 pb-20">
+        <div class="flex justify-center items-center pb-20 pr-5 pl-5">
+            <a href="https://www.imc.com"><img src="./assets/imclogo.png" alt="IMC" class="max-h-20"></a>   
+        </div>
+        
+        
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 pb-20">
             <!-- Example Sponsor Logo -->
-            <div class="flex justify-center items-center">
-                <a href="https://www.imc.com"><img src="./assets/imclogo.png" alt="IMC" class="max-h-20"></a>
-            </div>
             <div class="flex justify-center items-center">
                 <a href="https://www.drw.com"><img src="./assets/drwlogo.png" alt="DRW" class="max-h-20"></a>
             </div>
