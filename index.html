@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>UMich Quant Convention</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html {
@@ -79,7 +79,7 @@
     </section>
 
     <!-- Schedule Section -->
-    <section id="schedule" class="px-5 py-10 bg-[url('../assets/michigan-stadium.png')] bg-cover bg-no-repeat bg-fixed  ">
+    <section id="schedule" class="px-5 py-10 bg-[url('./assets/michigan-stadium.png')] bg-cover bg-no-repeat bg-fixed  ">
         <h2 class="text-3xl font-bold text-center mb-10 text-white ">Event Schedule</h2>
         <div class="max-w-4xl mx-auto space-y-4">
             <div class="bg-white shadow-lg rounded-lg p-5 space-y-4">
@@ -285,11 +285,19 @@
     </section>
 
     <section id="sponsors" class="py-10 bg-white">
+      
         <div class="text-center">
-            <h2 class="text-3xl font-bold mb-5">Sponsors</h2>
+            <h2 class="text-2xl font-bold mb-5">Title sponsors</h2>
         </div>
         <div class="flex justify-center items-center pb-20 pr-5 pl-5">
             <a href="https://www.imc.com"><img src="./assets/imclogo.png" alt="IMC" class="max-h-20"></a>   
+        </div>
+        <div class="flex justify-center items-center pb-20 pr-5 pl-5">
+            <a href="https://www.citadel.com"><img src="./assets/citadellogo.png" alt="Citadel" class="max-h-20"></a>   
+        </div>
+
+        <div class="text-center">
+            <h2 class="text-2xl font-bold mb-5">Sponsors</h2>
         </div>
         
         
@@ -310,18 +318,26 @@
 
         <!-- Repeat for each sponsor, adjusting the src attribute for each logo -->
         </div>
-        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 flex justify-center items-center">
             <div class="flex justify-center items-center">
                 <a href="https://www.janestreet.com"><img src="./assets/janestreetlogo.png" alt="Jane Street"
                         class="max-h-20"></a>
             </div>
             <div class="flex justify-center items-center">
                 <a href="https://www.hap-capital.com"><img src="./assets/hapcapitallogo.png" alt="HAP Capital"
-                        class="max-h-20"></a>
+                        class="max-h-28"></a>
             </div>
             <div class="flex justify-center items-center">
                 <a href="https://www.sig.com"><img src="./assets/siglogo.png" alt="Susquehanna International Group"
                         class="max-h-20"></a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="https://www.optiver.com"><img src="./assets/optiverlogo.png" alt="Optiver"
+                        class="max-h-20"></a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="https://www.optiver.com"><img src="./assets/esglogo.png" alt="Engineering Student Government"
+                        class="max-h-28"></a>
             </div>
         </div>
     </section>
